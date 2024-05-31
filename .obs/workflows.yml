@@ -44,12 +44,12 @@ test_build:
     - configure_repositories:
         project: linglong:app:CI:loongarch64
         repositories:
-          - name: deepin_23_repo
+          - name: uos_1070_repo
             paths:
               - target_project: linglong:app:CI
-                target_repository: deepin_23_repo
+                target_repository: uos_1070_repo
             architectures:
-              - loong64
+              - loongarch64
 
   filters:
     event: pull_request
