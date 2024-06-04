@@ -1,4 +1,9 @@
 test_build:
+  filters:
+    event: pull_request
+    branches:
+      only:
+        - main
   steps:
     - link_package:
         source_project: linglong:app
@@ -6,7 +11,14 @@ test_build:
         target_project: linglong:app:CI:amd64
         target_package: %{SCM_REPOSITORY_NAME}
         description: "Created by https://github.com/%{SCM_ORGANIZATION_NAME}/%{SCM_REPOSITORY_NAME}/pull/%{SCM_PR_NUMBER}"
-
+    - set_flags:
+        flags:
+          - type: build
+            status: enable
+            project: linglong:app:CI:amd64
+          - type: publish
+            status: enable
+            project: linglong:app:CI:amd64
     - configure_repositories:
         project: linglong:app:CI:amd64
         repositories:
@@ -23,7 +35,14 @@ test_build:
         target_project: linglong:app:CI:aarch64
         target_package: %{SCM_REPOSITORY_NAME}
         description: "Created by https://github.com/%{SCM_ORGANIZATION_NAME}/%{SCM_REPOSITORY_NAME}/pull/%{SCM_PR_NUMBER}"
-
+    - set_flags:
+        flags:
+          - type: build
+            status: enable
+            project: linglong:app:CI:aarch64
+          - type: publish
+            status: enable
+            project: linglong:app:CI:aarch64
     - configure_repositories:
         project: linglong:app:CI:aarch64
         repositories:
@@ -40,7 +59,14 @@ test_build:
         target_project: linglong:app:CI:loongarch64
         target_package: %{SCM_REPOSITORY_NAME}
         description: "Created by https://github.com/%{SCM_ORGANIZATION_NAME}/%{SCM_REPOSITORY_NAME}/pull/%{SCM_PR_NUMBER}"
-
+    - set_flags:
+        flags:
+          - type: build
+            status: enable
+            project: linglong:app:CI:loongarch64
+          - type: publish
+            status: enable
+            project: linglong:app:CI:loongarch64
     - configure_repositories:
         project: linglong:app:CI:loongarch64
         repositories:
@@ -50,20 +76,3 @@ test_build:
                 target_repository: uos_1070_repo
             architectures:
               - loongarch64
-
-  filters:
-    event: pull_request
-# commit_build:
-#   steps:
-#     - branch_package:
-#         source_project: linglong:app
-#         source_package: template_CI
-#         target_project: linglong:app:Testing
-#         target_package: %{SCM_REPOSITORY_NAME}
-#     - branch_package:
-#         source_project: linglong:app
-#         source_package: template_CI_aarch64
-#         target_project: linglong:app:Testing:aarch64
-#         target_package: %{SCM_REPOSITORY_NAME}
-#   filters:
-#     event: push
