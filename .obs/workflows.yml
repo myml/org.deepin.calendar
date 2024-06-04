@@ -5,7 +5,7 @@ test_build:
       only:
         - main
   steps:
-    - link_package:
+    - branch_package:
         source_project: linglong:app
         source_package: template_CI
         target_project: linglong:app:CI:amd64
@@ -29,7 +29,7 @@ test_build:
             architectures:
               - x86_64
 
-    - link_package:
+    - branch_package:
         source_project: linglong:app
         source_package: template_CI_aarch64
         target_project: linglong:app:CI:aarch64
@@ -53,7 +53,7 @@ test_build:
             architectures:
               - aarch64
 
-    - link_package:
+    - branch_package:
         source_project: linglong:app
         source_package: template_CI_loongarch64
         target_project: linglong:app:CI:loongarch64
