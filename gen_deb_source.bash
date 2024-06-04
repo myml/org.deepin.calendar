@@ -12,7 +12,7 @@ rm -rf ~/.aptly
 aptly mirror create -ignore-signatures -architectures=$arch -filter="$pkgs" -filter-with-deps linglong-download-depend $url $distribution $components > /dev/null
 aptly mirror update -ignore-signatures linglong-download-depend > download.log
 
-grep 'Success downloading' download.log |grep 'deb$'|awk '{print $3}'|while IFS= read -r url; do
+grep 'Success downloading' download.log|grep 'deb$'|awk '{print $3}'|sort|while IFS= read -r url; do
     filename=$(basename "$url")
     filepath=$(find ~/.aptly/pool|grep "\_$filename")
     digest=$(sha256sum "$filepath"|awk '{print $1}')
