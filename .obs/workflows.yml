@@ -1,9 +1,6 @@
 test_build:
   filters:
     event: pull_request
-    branches:
-      only:
-        - main
   steps:
     - branch_package:
         source_project: linglong:app
