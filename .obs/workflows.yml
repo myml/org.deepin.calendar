@@ -78,23 +78,21 @@ test_build:
               - loongarch64
 
 commit_build:
+  filters:
+    event: tag_push
   steps:
     - branch_package:
         source_project: linglong:app
         source_package: template_CI
         target_project: linglong:app:stable:amd64
         target_package: %{SCM_REPOSITORY_NAME}
-  steps:
     - branch_package:
         source_project: linglong:app
         source_package: template_CI_aarch64
         target_project: linglong:app:stable:aarch64
         target_package: %{SCM_REPOSITORY_NAME}
-  steps:
     - branch_package:
         source_project: linglong:app
         source_package: template_CI_loongarch64
         target_project: linglong:app:stable:loongarch64
         target_package: %{SCM_REPOSITORY_NAME}
-  filters:
-    event: tag_push
