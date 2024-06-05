@@ -162,9 +162,6 @@ sources:
     url: https://pools.uniontech.com/deepin-beige/pool/main/libz/libzstd/libzstd1_1.5.5+dfsg2-2_arm64.deb
     digest: 6c0565bb989b520550da78cd0a32ecd4d85ca57b18e75e38816afb12db3d3160
   - kind: file
-    url: https://pools.uniontech.com/deepin-beige/pool/main/l/linux-5.10.0-arm64-desktop/linux-libc-dev_23.00.00.20_arm64.deb
-    digest: 53ee970667bcd8d46e9d060112fba5ac0b213102052f5524ecaf9ef00397d523
-  - kind: file
     url: https://pools.uniontech.com/deepin-beige/pool/main/n/nettle/libhogweed6_3.7.3-1_arm64.deb
     digest: 0caf1aec7651bca8c8c0646eb87b064e522fbdc654edebc8c7e10e0a12f77c94
   - kind: file
