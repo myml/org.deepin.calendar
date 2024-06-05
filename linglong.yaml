@@ -29,6 +29,9 @@ sources:
   - kind: git
     url: https://github.com/linuxdeepin/dde-calendar
     commit: 5.13.1
+  # linglong:gen_deb_source sources amd64 https://pools.uniontech.com/deepin-beige beige main community
+  # linglong:gen_deb_source install libical-dev
+  # linglong:gen_deb_source install wget
   - kind: file
     url: https://pools.uniontech.com/deepin-beige/pool/main/a/acl/libacl1_2.3.1-1_amd64.deb
     digest: f06e936eb913b8e9271c17e6d8b94d9e4f0aa558d7debdc324c9484908ee8dc8

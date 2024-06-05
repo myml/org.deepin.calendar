@@ -29,6 +29,9 @@ sources:
   - kind: git
     url: https://github.com/linuxdeepin/dde-calendar
     commit: 5.13.1
+  # linglong:gen_deb_source sources arm64 https://pools.uniontech.com/deepin-beige beige main community
+  # linglong:gen_deb_source install libical-dev
+  # linglong:gen_deb_source install wget
   - kind: file
     url: https://pools.uniontech.com/deepin-beige/pool/main/a/acl/libacl1_2.3.1-1_arm64.deb
     digest: 51808064361bdae539f985645eaee59b53c703b293174f761d996b27f2b8d860
@@ -161,6 +164,9 @@ sources:
   - kind: file
     url: https://pools.uniontech.com/deepin-beige/pool/main/libz/libzstd/libzstd1_1.5.5+dfsg2-2_arm64.deb
     digest: 6c0565bb989b520550da78cd0a32ecd4d85ca57b18e75e38816afb12db3d3160
+  - kind: file
+    url: https://pools.uniontech.com/deepin-beige/pool/main/l/linux-upstream/linux-libc-dev_6.8.11-g05817e39c72a-1_arm64.deb
+    digest: 09e9d38f76ca99cea347b2fe7662790f41343d2d9f1308509f6b521cd21df93d
   - kind: file
     url: https://pools.uniontech.com/deepin-beige/pool/main/n/nettle/libhogweed6_3.7.3-1_arm64.deb
     digest: 0caf1aec7651bca8c8c0646eb87b064e522fbdc654edebc8c7e10e0a12f77c94
