@@ -31,8 +31,7 @@ sources:
     commit: be71af0bd9f7022ace56ad1d1a0c59f8d75f2368
 
   # linglong:gen_deb_source sources loongarch64 https://pools.uniontech.com/desktop-professional eagle/1070 main
-  # linglong:gen_deb_source install libical-dev
-  # linglong:gen_deb_source install wget
+  # linglong:gen_deb_source install libical-dev,wget
   - kind: file
     url: https://pools.uniontech.com/desktop-professional/pool/main/a/acl/libacl1_2.2.53-4+sign_loongarch64.deb
     digest: 03aa1a646821b7ec2e8ff75d6a6460ac776b231eeae1258acb9d475f0b8dc13d
