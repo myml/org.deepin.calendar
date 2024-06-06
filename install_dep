@@ -26,8 +26,7 @@ mkdir /tmp/deb-source-file || true
 while IFS= read -r file
 do
     # 输出deb名，但不换行，便于在包名后面加skip
-    echo "$(basename $file)"
-    echo -n "----------$file"
+    echo -n "$file"
     # 提取control文件
     control_file=$(ar -t "$file" | grep control.tar)
     ar -x "$file" "$control_file"
@@ -51,7 +50,6 @@ do
         # 解压data.tar文件到输出目录
         mkdir "$data_list_dir"
         tar -xvf "$data_file" -C "$data_list_dir" >> "/tmp/deb-source-file/$(basename "$file").list"
-        ls -al /tmp/deb-source-file/$(basename "$file").list
         rm "$data_file"
 
         # 清理不需要复制的目录
