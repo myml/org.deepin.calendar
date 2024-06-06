@@ -16,7 +16,7 @@ command:
 build: |
   set -x
   bash ./install_dep linglong/sources "$PREFIX"
-  cmake -S linglong/sources/1dde-calendar -B build_dir/dde-calendar ${conf_args} \
+  cmake -S linglong/sources/dde-calendar -B build_dir/dde-calendar ${conf_args} \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
     -DVERSION=5.13.1.1 \
     -DEXEC_DDE_CALENDAR="/usr/bin/ll-cli run org.dde.calendar --exec dde-calendar" \
